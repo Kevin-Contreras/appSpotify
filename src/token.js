@@ -27,6 +27,7 @@ export const getRefreshedAccesToken = () => {
       'Authorization': 'Basic ' + (new Buffer.from(client_id + ':' + client_secret).toString('base64'))
     }
   }).then(response => {
+    window.localStorage.setItem("access_token",response.data.access_token)
     return response.data.access_token;
   }).catch(function(err){
   })
