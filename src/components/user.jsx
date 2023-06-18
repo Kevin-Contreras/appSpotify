@@ -90,7 +90,6 @@ let [video,setVideo] = React.useState("")
 useEffect( ()=>{
     setCargador(false)
     getRefreshedAccesToken()
-    alert(access_token)
     axios.get("https://api.spotify.com/v1/me",{
       headers:{
           "Authorization": "Bearer " + access_token,
