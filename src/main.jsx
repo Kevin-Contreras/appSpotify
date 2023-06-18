@@ -14,10 +14,10 @@ function App (){
   return(
     <BrowserRouter>
       <Routes>
-        <Route path="/appSpotify" element={<Spotify/>}></Route>
+        <Route path="/" element={<Spotify/>}></Route>
         <Route path='/spotify' element={<Principal/>}></Route>
         <Route path='/user' element={<Usuario/>}></Route>
-        <Route path="*" render={() => <Redirect to="/appSpotify" />} />
+        <Route path="*" render={() => <Redirect to="/" />} />
 
 
 
