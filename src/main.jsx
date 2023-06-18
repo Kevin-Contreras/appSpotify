@@ -9,7 +9,7 @@ import About from './components/about'
 import CartVista from './components/carritoVista'
 import Spotify from './components/spotify'
 import Usuario from './components/user'
-
+import Apps from './components/products'
 function App (){
 
 
@@ -20,7 +20,7 @@ function App (){
         <Route path="/" element={<Spotify />} />
         <Route path="/spotify" element={<Principal />} />
         <Route path="/user" element={<Usuario />} />
-        <Route path="*" element={<Principal />} />
+        <Route path="*" element={<Apps />} />
       </Routes>
     </BrowserRouter>
   );

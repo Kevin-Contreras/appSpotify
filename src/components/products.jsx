@@ -5,7 +5,7 @@ import axios from 'axios'
 import '../App.css'
 import { BrowserRouter, Routes, Route,NavLink,useLocation,useNavigate, redirect } from "react-router-dom";
 
-function App() {
+function Apps() {
   const [count, setCount] = useState(0)
   const [data, setData] = useState([])
   var Global = {
@@ -62,4 +62,4 @@ const autenticateUser = (spotyCode) => {
   )
 }
 
-export default App
+export default Apps
