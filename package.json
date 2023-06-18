@@ -1,11 +1,13 @@
 {
   "name": "store",
+  "homepage":"https://kevin-contreras.github.io/appSpotify/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite dist",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
