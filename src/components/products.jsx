@@ -13,7 +13,7 @@ function App() {
     songLimit: 100,
     access_token: "",
     refresh_token: "",
-    redirect_uri : "http://localhost:5173/appSpotify/spotifyify",
+    redirect_uri : "https://kevin-contreras.github.io/appSpotify/spotifyify",
     client_id : "2a29cfd392b3478aa150dd47c4814b76",
     client_secret : "bf7bed7ea7ae42448d31f0c416a10892",
     scopes : "user-read-playback-state ugc-image-upload user-modify-playback-state user-read-currently-playing user-follow-modify user-read-email"
