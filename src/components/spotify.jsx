@@ -27,7 +27,6 @@ function Spotify (){
 
         const spoty_url = `https://accounts.spotify.com/authorize?client_id=${Global.client_id}&response_type=code&redirect_uri=${Global.redirect_uri}&scope=${Global.scopes}`;
         window.location.replace(spoty_url)
-        navigate("/spotify")
 
     }
     return(

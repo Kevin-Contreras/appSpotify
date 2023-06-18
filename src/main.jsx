@@ -17,7 +17,7 @@ function App (){
         <Route path="/" element={<Spotify/>}></Route>
         <Route path='/spotify' element={<Principal/>}></Route>
         <Route path='/user' element={<Usuario/>}></Route>
-        <Route path="*" render={() => <Redirect to="/" />} />
+        <Route path="*" render={() => <Redirect to="/spotify" />} />
 
 
 
