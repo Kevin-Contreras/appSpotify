@@ -195,12 +195,14 @@ img {
 .css-q2p9w9{
   position: static;
 }
+.css-k57fb3{
+  height: 0 !important
+}
 @media (max-width: 600px) {
   .item{
     width:70%;
     margin:auto;
     display:block;
-    overflow: auto;
 
   }
   .video{
@@ -217,7 +219,6 @@ img {
     text-align:center;
     margin-bottom:20px;
     width:100%;
-    overflow: auto;
   }
 }
 

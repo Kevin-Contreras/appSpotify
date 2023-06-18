@@ -134,7 +134,7 @@ useEffect( ()=>{
     return<div className='item2' > <div className='item'>
         <Box sx={{ width: '100%' }}>
       <Widget style={{position:"static"}}>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center' ,position:"static"}}>
           <CoverImage>
             <img
               src=  {item.track.album.images[0].url}    
