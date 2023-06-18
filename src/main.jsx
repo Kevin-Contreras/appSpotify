@@ -11,20 +11,26 @@ import Spotify from './components/spotify'
 import Usuario from './components/user'
 
 function App (){
-  return(
+  const navigate = useNavigate();
+
+  // Función para redirigir a la ruta /spotify
+  const redirectToSpotify = () => {
+    navigate('/spotify');
+  };
+
+  return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Spotify/>}></Route>
-        <Route path='/spotify' element={<Principal/>}></Route>
-        <Route path='/user' element={<Usuario/>}></Route>
-        <Route path="*" render={() => <Redirect to="/spotify" />} />
-
-
-
+        <Route path="/" element={<Outlet />} />
+        <Route path="/spotify" element={<Principal />} />
+        <Route path="/user" element={<Usuario />} />
+        {/* Redirigir a /spotify si ninguna ruta coincide */}
+        <Route path="*" element={redirectToSpotify} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <App/>
 )
