@@ -21,7 +21,7 @@ function App (){
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Outlet />} />
+        <Route path="/" element={<Spotify />} />
         <Route path="/spotify" element={<Principal />} />
         <Route path="/user" element={<Usuario />} />
         {/* Redirigir a /spotify si ninguna ruta coincide */}
