@@ -20,7 +20,7 @@ function App (){
         <Route path="/" element={<Spotify />} />
         <Route path="/spotify" element={<Principal />} />
         <Route path="/user" element={<Usuario />} />
-        <Route path="*" element={<Apps />} />
+        <Route path="*" element={<Spotify />} />
       </Routes>
     </BrowserRouter>
   );

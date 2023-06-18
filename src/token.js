@@ -29,6 +29,5 @@ export const getRefreshedAccesToken = () => {
   }).then(response => {
     return response.data.access_token;
   }).catch(function(err){
-    alert(err)
   })
 }

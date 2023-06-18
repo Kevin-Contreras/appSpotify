@@ -24,7 +24,6 @@ const location = useLocation();
 useEffect(() => {
     const urlParams = new URLSearchParams(location.search)
     const spotyCode = urlParams.get("code");
-    alert(spotyCode)
     if (spotyCode) {
         autenticateUser(spotyCode)
 
