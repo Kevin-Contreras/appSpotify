@@ -90,7 +90,6 @@ let [video,setVideo] = React.useState("")
   const lightIconColor = theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)';
 
 useEffect( ()=>{
-    setCargador(false)
 
     getRefreshedAccesToken()
     let access_token = localStorage.getItem('access_token');
