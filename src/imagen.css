@@ -6,15 +6,15 @@
   .imagen {
     display: block;
     opacity: 1;
-    transition: opacity 1s; /* Agrega una transición suave para suavizar el efecto */
+    transition: opacity 0.5s; /* Agrega una transición suave para suavizar el efecto */
     border-radius:100%;
      margin-top:20px;
      margin-bottom:20px;
-     -webkit-transition: all 1s linear;
--moz-transition: all 1s linear;
--ms-transition: all 1s linear;
--o-transition: all 1s linear;
-transition: all 1s linear;
+     -webkit-transition: all .5 s linear;
+-moz-transition: all 0.5s linear;
+-ms-transition: all 0.5s linear;
+-o-transition: all 0.5s linear;
+transition: all 0.5s linear;
   }
   
   .texto {
@@ -26,21 +26,21 @@ transition: all 1s linear;
     font-size: 30px;
     text-align: center;
     opacity: 0; /* Inicialmente oculta el texto */
-    transition: opacity 1s; /* Agrega una transición suave para suavizar el efecto */
+    transition: opacity 0.5s; /* Agrega una transición suave para suavizar el efecto */
     -webkit-transition: all 1s linear;
--moz-transition: all 1s linear;
--ms-transition: all 1s linear;
--o-transition: all 1s linear;
-transition: all 1s linear;
+-moz-transition: all 0.5s linear;
+-ms-transition: all 0.5s linear;
+-o-transition: all 0.5s linear;
+transition: all 0.5s linear;
   }
   
   .contenedor:hover img {
     opacity: 0.5; /* Cambia la opacidad de la imagen al pasar el mouse por encima */
-    -webkit-transition: all 1s linear;
--moz-transition: all 1s linear;
--ms-transition: all 1s linear;
--o-transition: all 1s linear;
-transition: all 1s linear;
+    -webkit-transition: all 0.5s linear;
+-moz-transition: all 0.5s linear;
+-ms-transition: all 0.5s linear;
+-o-transition: all 0.5s linear;
+transition: all 0.5s linear;
   }
   
   .contenedor:hover .texto {
