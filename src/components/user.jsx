@@ -106,7 +106,8 @@ useEffect( ()=>{
       })
   
     }).catch(function(err){
-      navigator("/user")
+      window.location.reload()
+    
       setCargador(true)
 
         console.log(err)
@@ -120,7 +121,8 @@ useEffect( ()=>{
       setCargador(true)
 
   }).catch(function(err){
-    navigator("/user")
+    
+    window.location.reload()
 
     setCargador(true)
       console.log(err)
