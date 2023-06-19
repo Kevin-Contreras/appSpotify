@@ -69,7 +69,6 @@ function Usuario (){
 let [data, setImg] = useState({})
 let [music,setMusic] = useState([])
 let [cargador,setCargador] = useState(false)
-let access_token = localStorage.getItem('access_token');
 let [video,setVideo] = React.useState("")
 
   const theme = useTheme();
@@ -89,7 +88,10 @@ let [video,setVideo] = React.useState("")
 
 useEffect( ()=>{
     setCargador(false)
+
     getRefreshedAccesToken()
+    let access_token = localStorage.getItem('access_token');
+
     axios.get("https://api.spotify.com/v1/me",{
       headers:{
           "Authorization": "Bearer " + access_token,
