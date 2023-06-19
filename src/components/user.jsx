@@ -105,7 +105,9 @@ useEffect( ()=>{
          usuario: res.data.id
       })
   
-    }).then(function(err){
+    }).catch(function(err){
+      setCargador(true)
+
         console.log(err)
     })
   axios.get("https://api.spotify.com/v1/me/player/recently-played",{
