@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import '../App.css'
 import '../inicio.css'
+import '../imagen.css'
 
 import { BrowserRouter, Routes, Route,NavLink } from "react-router-dom";
 import axios from 'axios';
@@ -127,8 +128,11 @@ useEffect( ()=>{
 
 <div>
     {cargador==false?<div ><CircularIndeterminate/></div>:<div  > 
-<img src={data.imagen} style={{borderRadius:"100%", marginTop:"20px",marginBottom:"20px"}} alt=""   />
-<span className='efecto' style={{textAlign:"center"}}>{data.nombre}</span>
+      <div className='contenedor'>
+      <img src={data.imagen} className='imagen' alt=""   />
+<div className='texto'>{data.nombre}</div>
+      </div>
+
 
     <div style={{textAlign:"center",width:"100%"}}>
 
