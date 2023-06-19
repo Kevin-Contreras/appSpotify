@@ -92,38 +92,36 @@ let [video,setVideo] = React.useState("")
 useEffect( ()=>{
     setCargador(false)
 
-    getRefreshedAccesToken().then(()=>{
-      let access_token = localStorage.getItem('access_token');
+    getRefreshedAccesToken()
+    let access_token = localStorage.getItem('access_token');
 
-      axios.get("https://api.spotify.com/v1/me",{
-        headers:{
-            "Authorization": "Bearer " + access_token,
-        }
-      }).then((res)=>{
-        setImg({
-           imagen: res.data.images[0].url,
-           nombre:res.data.display_name,
-           usuario: res.data.id
-        })
-    
-      }).then(function(err){
-          console.log(err)
+    axios.get("https://api.spotify.com/v1/me",{
+      headers:{
+          "Authorization": "Bearer " + access_token,
+      }
+    }).then((res)=>{
+      setImg({
+         imagen: res.data.images[0].url,
+         nombre:res.data.display_name,
+         usuario: res.data.id
       })
-    axios.get("https://api.spotify.com/v1/me/player/recently-played",{
-        headers:{
-            "Authorization": "Bearer " + access_token
-        }
-    }).then(function(res){
-        setMusic(res.data.items)
-        setCargador(true)
   
-    }).catch(function(err){
-      setCargador(true)
+    }).then(function(err){
         console.log(err)
     })
-    
-    })
-   
+  axios.get("https://api.spotify.com/v1/me/player/recently-played",{
+      headers:{
+          "Authorization": "Bearer " + access_token
+      }
+  }).then(function(res){
+      setMusic(res.data.items)
+      setCargador(true)
+
+  }).catch(function(err){
+    setCargador(true)
+      console.log(err)
+  })
+  
 },[])
 
     return(
