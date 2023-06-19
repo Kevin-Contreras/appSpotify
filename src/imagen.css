@@ -6,10 +6,15 @@
   .imagen {
     display: block;
     opacity: 1;
-    transition: opacity 0.3s; /* Agrega una transición suave para suavizar el efecto */
+    transition: opacity 2s; /* Agrega una transición suave para suavizar el efecto */
     border-radius:100%;
      margin-top:20px;
-     margin-bottom:20px
+     margin-bottom:20px;
+     -webkit-transition: all 2s linear;
+-moz-transition: all 2s linear;
+-ms-transition: all 2s linear;
+-o-transition: all 2s linear;
+transition: all 2s linear;
   }
   
   .texto {
@@ -21,11 +26,21 @@
     font-size: 24px;
     text-align: center;
     opacity: 0; /* Inicialmente oculta el texto */
-    transition: opacity 0.3s; /* Agrega una transición suave para suavizar el efecto */
+    transition: opacity 2s; /* Agrega una transición suave para suavizar el efecto */
+    -webkit-transition: all 2s linear;
+-moz-transition: all 2s linear;
+-ms-transition: all 2s linear;
+-o-transition: all 2s linear;
+transition: all 2s linear;
   }
   
   .contenedor:hover img {
-    opacity: 0.8; /* Cambia la opacidad de la imagen al pasar el mouse por encima */
+    opacity: 0.5; /* Cambia la opacidad de la imagen al pasar el mouse por encima */
+    -webkit-transition: all 2s linear;
+-moz-transition: all 2s linear;
+-ms-transition: all 2s linear;
+-o-transition: all 2s linear;
+transition: all 2s linear;
   }
   
   .contenedor:hover .texto {
