@@ -44,3 +44,12 @@
     width: 100px;
     height: 33.33px;
   }
+  @media (max-width: 600px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+    }
+  }
