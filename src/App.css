@@ -23,7 +23,7 @@ body{
 
 /*===== VARIABLES CSS =====*/
 :root {
-  --dark-color-lighten: #171717;
+  --dark-color-lighten: #000000;
   --red-card: #1f1f1f;
   --blue-card: #383838;
   --btn: #111111;

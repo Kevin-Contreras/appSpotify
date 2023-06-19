@@ -8,11 +8,26 @@
 
   /* Estilos para el título */
   .title {
-    font-size: 24px;
+    font-size: 100px;
     font-weight: bold;
     margin-bottom: 20px;
+  
   }
-
+  .efecto{
+    background-image: linear-gradient(to right,#24cb19,#2fab22,#328c26,#273722,#24cb19) ;
+    animation: background-pan 3s linear infinite;
+    background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  @keyframes background-pan {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
   /* Estilos para el botón */
   .button {
     padding: 12px 24px;
@@ -25,9 +40,9 @@
   }
   .logo {
     position: absolute;
-    top: 30%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
-    width: 300px;
-    height: 100px;
+    width: 100px;
+    height: 33.33px;
   }

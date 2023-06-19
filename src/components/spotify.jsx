@@ -33,7 +33,7 @@ function Spotify (){
 <div class="container">
 <img src={data} alt="Logo" class="logo"/>
 
-    <h1 class="title">Plump</h1>
+    <span class="title efecto">Plump</span>
     <button onClick={login} class="button">Login with spotify</button>
  </div>
     )

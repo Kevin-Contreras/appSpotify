@@ -3,6 +3,8 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import '../App.css'
+import '../inicio.css'
+
 import { BrowserRouter, Routes, Route,NavLink } from "react-router-dom";
 import axios from 'axios';
 import CircularIndeterminate from './cargador';
@@ -125,8 +127,8 @@ useEffect( ()=>{
 
 <div>
     {cargador==false?<div ><CircularIndeterminate/></div>:<div  > 
-<img src={data.imagen} style={{borderRadius:"100%"}} alt=""   />
-<h1 style={{marginBottom:"20px"}}>{data.nombre}</h1>
+<img src={data.imagen} style={{borderRadius:"100%", marginTop:"20px",marginBottom:"20px"}} alt=""   />
+<span className='efecto' style={{textAlign:"center"}}>{data.nombre}</span>
 
     <div style={{textAlign:"center",width:"100%"}}>
 
