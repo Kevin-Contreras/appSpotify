@@ -100,7 +100,7 @@ useEffect( ()=>{
       }
     }).then((res)=>{
       setImg({
-         imagen: res.data.images[0].url,
+         imagen: res.data.images[1].url,
          nombre:res.data.display_name,
          usuario: res.data.id
       })
