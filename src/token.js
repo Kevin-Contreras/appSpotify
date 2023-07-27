@@ -30,5 +30,6 @@ export const getRefreshedAccesToken = () => {
     window.localStorage.setItem("access_token",response.data.access_token)
     return response.data.access_token;
   }).catch(function(err){
+    console.log(err)
   })
 }
