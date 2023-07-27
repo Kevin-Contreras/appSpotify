@@ -106,7 +106,6 @@ useEffect( ()=>{
       })
   
     }).catch(function(err){
-      getRefreshedAccesToken()
 
       setCargador(true)
 
@@ -121,7 +120,6 @@ useEffect( ()=>{
       setCargador(true)
 
   }).catch(function(err){
-    getRefreshedAccesToken()
 
 
     setCargador(true)
