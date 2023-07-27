@@ -106,7 +106,6 @@ useEffect( ()=>{
       })
   
     }).catch(function(err){
-      window.location.reload()
     
       setCargador(false)
 
