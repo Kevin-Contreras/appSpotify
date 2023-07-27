@@ -107,24 +107,7 @@ useEffect( ()=>{
     setCargador(false)
       console.log(err)
   })
-    axios.get("https://api.spotify.com/v1/me",{
-      headers:{
-          "Authorization": "Bearer " + access_token,
-      }
-    }).then((res)=>{
-      setImg({
-         imagen: res.data.images[1].url,
-         nombre:res.data.display_name,
-         usuario: res.data.id
-      })
   
-    }).catch(function(err){
-    
-      setCargador(false)
-
-        console.log(err)
-    })
-    getRefreshedAccesToken()
 
 
   
