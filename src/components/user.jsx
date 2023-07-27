@@ -106,8 +106,8 @@ useEffect( ()=>{
       })
   
     }).catch(function(err){
-      window.location.reload()
-    
+      getRefreshedAccesToken()
+
       setCargador(true)
 
         console.log(err)
@@ -121,8 +121,8 @@ useEffect( ()=>{
       setCargador(true)
 
   }).catch(function(err){
-    
-    window.location.reload()
+    getRefreshedAccesToken()
+
 
     setCargador(true)
       console.log(err)
