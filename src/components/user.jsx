@@ -112,6 +112,8 @@ useEffect( ()=>{
 
         console.log(err)
     })
+    getRefreshedAccesToken()
+
   axios.get("https://api.spotify.com/v1/me/player/recently-played",{
       headers:{
           "Authorization": "Bearer " + access_token
@@ -122,7 +124,6 @@ useEffect( ()=>{
 
   }).catch(function(err){
     
-    window.location.reload()
 
     setCargador(false)
       console.log(err)
