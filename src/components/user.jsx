@@ -93,7 +93,20 @@ useEffect( ()=>{
 
     getRefreshedAccesToken()
     let access_token = localStorage.getItem('access_token');
+    axios.get("https://api.spotify.com/v1/me/player/recently-played",{
+      headers:{
+          "Authorization": "Bearer " + access_token
+      }
+  }).then(function(res){
+      setMusic(res.data.items)
+      setCargador(true)
 
+  }).catch(function(err){
+    
+
+    setCargador(false)
+      console.log(err)
+  })
     axios.get("https://api.spotify.com/v1/me",{
       headers:{
           "Authorization": "Bearer " + access_token,
@@ -113,20 +126,7 @@ useEffect( ()=>{
     })
     getRefreshedAccesToken()
 
-  axios.get("https://api.spotify.com/v1/me/player/recently-played",{
-      headers:{
-          "Authorization": "Bearer " + access_token
-      }
-  }).then(function(res){
-      setMusic(res.data.items)
-      setCargador(true)
 
-  }).catch(function(err){
-    
-
-    setCargador(false)
-      console.log(err)
-  })
   
 },[])
 
