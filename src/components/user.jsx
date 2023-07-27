@@ -81,7 +81,13 @@ let [video,setVideo] = React.useState("")
   const [frames, setFrame] = React.useState(false);
   const [nombre, setNombre] = React.useState("");
 
-
+  function formatDuration(value) {
+    const minute = Math.floor((value/1000) / 60);
+    const secondLeft = Math.floor((value/1000) - minute * 60);
+    return `${minute}:${secondLeft < 10 ? `0${secondLeft}` : secondLeft}`;
+  }
+  const mainIconColor = theme.palette.mode === 'dark' ? '#fff' : '#000';
+  const lightIconColor = theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)';
 
 useEffect( ()=>{
 
@@ -94,14 +100,15 @@ useEffect( ()=>{
       }
     }).then((res)=>{
       setImg({
-         imagen: "",
+         imagen: res.data.images[1].url,
          nombre:res.data.display_name,
          usuario: res.data.id
       })
   
     }).catch(function(err){
-
-      setCargador(true)
+      window.location.reload()
+    
+      setCargador(false)
 
         console.log(err)
     })
@@ -114,7 +121,8 @@ useEffect( ()=>{
       setCargador(true)
 
   }).catch(function(err){
-
+    
+    window.location.reload()
 
     setCargador(false)
       console.log(err)
@@ -141,7 +149,10 @@ useEffect( ()=>{
       <Widget style={{position:"static"}}>
         <Box sx={{ display: 'flex', alignItems: 'center' ,position:"static"}}>
           <CoverImage>
-          
+            <img
+              src=  {item.track.album.images[0].url}    
+
+            />
           </CoverImage>
           <Box sx={{ ml: 1.5, minWidth: 0 }}>
             <Typography variant="caption" color="white" fontWeight={500}>
