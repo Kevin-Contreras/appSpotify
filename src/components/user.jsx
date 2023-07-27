@@ -81,13 +81,7 @@ let [video,setVideo] = React.useState("")
   const [frames, setFrame] = React.useState(false);
   const [nombre, setNombre] = React.useState("");
 
-  function formatDuration(value) {
-    const minute = Math.floor((value/1000) / 60);
-    const secondLeft = Math.floor((value/1000) - minute * 60);
-    return `${minute}:${secondLeft < 10 ? `0${secondLeft}` : secondLeft}`;
-  }
-  const mainIconColor = theme.palette.mode === 'dark' ? '#fff' : '#000';
-  const lightIconColor = theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)';
+
 
 useEffect( ()=>{
 
@@ -107,7 +101,7 @@ useEffect( ()=>{
   
     }).catch(function(err){
 
-      setCargador(true)
+      setCargador(false)
 
         console.log(err)
     })
@@ -122,7 +116,7 @@ useEffect( ()=>{
   }).catch(function(err){
 
 
-    setCargador(true)
+    setCargador(false)
       console.log(err)
   })
   
