@@ -93,7 +93,6 @@ useEffect( ()=>{
           "Authorization": "Bearer " + access_token,
       }
     }).then((res)=>{
-      setCargador(true)
       setImg({
          imagen: res.data.images[1].url,
          nombre:res.data.display_name,
@@ -102,11 +101,24 @@ useEffect( ()=>{
   
     }).catch(function(err){
 
-      setCargador(false)
+      setCargador(true)
 
         console.log(err)
     })
+  axios.get("https://api.spotify.com/v1/me/player/recently-played",{
+      headers:{
+          "Authorization": "Bearer " + access_token
+      }
+  }).then(function(res){
+      setMusic(res.data.items)
+      setCargador(true)
 
+  }).catch(function(err){
+
+
+    setCargador(false)
+      console.log(err)
+  })
   
 },[])
 
@@ -129,10 +141,7 @@ useEffect( ()=>{
       <Widget style={{position:"static"}}>
         <Box sx={{ display: 'flex', alignItems: 'center' ,position:"static"}}>
           <CoverImage>
-            <img
-              src=  {item.track.album.images[0].url}    
-
-            />
+          
           </CoverImage>
           <Box sx={{ ml: 1.5, minWidth: 0 }}>
             <Typography variant="caption" color="white" fontWeight={500}>
