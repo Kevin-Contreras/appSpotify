@@ -93,6 +93,7 @@ useEffect( ()=>{
           "Authorization": "Bearer " + access_token,
       }
     }).then((res)=>{
+      setCargador(true)
       setImg({
          imagen: res.data.images[1].url,
          nombre:res.data.display_name,
