@@ -16,7 +16,7 @@ function Apps() {
     redirect_uri : "https://app-spotify-three.vercel.app/spotify",
     client_id : "2a29cfd392b3478aa150dd47c4814b76",
     client_secret : "bf7bed7ea7ae42448d31f0c416a10892",
-    scopes : "user-read-playback-state ugc-image-upload user-modify-playback-state user-read-currently-playing user-follow-modify user-read-email"
+    scopes : "user-read-playback-state ugc-image-upload  user-read-recently-played app-remote-control user-read-private playlist-modify-public user-modify-playback-state user-read-currently-playing user-follow-modify user-read-email"
 }
 let navigate = useNavigate();
 const location = useLocation();

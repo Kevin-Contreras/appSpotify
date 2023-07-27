@@ -93,7 +93,26 @@ useEffect( ()=>{
 
     getRefreshedAccesToken()
     let access_token = localStorage.getItem('access_token');
-    axios.get("https://api.spotify.com/v1/me/player/recently-played",{
+
+    axios.get("https://api.spotify.com/v1/me",{
+      headers:{
+          "Authorization": "Bearer " + access_token,
+      }
+    }).then((res)=>{
+      setImg({
+         imagen: res.data.images[1].url,
+         nombre:res.data.display_name,
+         usuario: res.data.id
+      })
+  
+    }).catch(function(err){
+      window.location.reload()
+    
+      setCargador(false)
+
+        console.log(err)
+    })
+  axios.get("https://api.spotify.com/v1/me/player/recently-played",{
       headers:{
           "Authorization": "Bearer " + access_token
       }
@@ -103,13 +122,11 @@ useEffect( ()=>{
 
   }).catch(function(err){
     
+    window.location.reload()
 
     setCargador(false)
       console.log(err)
   })
-  
-
-
   
 },[])
 
